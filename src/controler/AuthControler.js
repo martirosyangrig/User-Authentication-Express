@@ -10,7 +10,7 @@ class AuthControler { // class for creating functions our routers
         const user = users.find(user => user.email === email); // cheking if there is any user with taht email
         
         if(!user) { // if not returning mess
-            res.status(301).json({mess: "Invalid username or password"})
+            res.status(301).send()
             return;
         }
        
